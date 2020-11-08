@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Hyrabil.Models.SkapaHyrbilar>
+
+@{
+    ViewData["Title"] = "Lista Av Hyrabilar";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<p>
+    <a asp-action="Create">Skapa Ny BilHyrning</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Namn
+            </th>
+            <th>
+                Växellåda
+            </th>
+            <th>
+                Sittplatser     
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+</table>
+
