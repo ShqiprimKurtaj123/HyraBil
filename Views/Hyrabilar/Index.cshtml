@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<Hyrabil.Models.SkapaHyrbilar>
 
-@{
-    ViewData["Title"] = "Lista Av Hyrabilar";
-}
+@{ ViewData["Title"] = "Lista Av Hyrabilar"; }
 <h1>@ViewData["Title"]</h1>
 
+
+@{ ViewData["Title"] = "Lista av bilr"; }
+
+<h1>Lista av bilar</h1>
 
 <p>
     <a asp-action="Create">Skapa Ny BilHyrning</a>
@@ -14,17 +16,29 @@
     <thead>
         <tr>
             <th>
-                Namn
+                Name
             </th>
             <th>
-                Växellåda
+                Floor
             </th>
             <th>
-                Sittplatser     
+                Size
             </th>
             <th>
             </th>
         </tr>
     </thead>
+    <tbody>
+        @foreach (var room in Model)
+        {
+<tr>
+    <td>@room.Namn</td>
+    <td>@room.VaxelLadaType</td>
+    <td>@room.SittPlatserType</td>
+    <td>
+        <a asp-action="Delete" asp-route-id="@room.Id">Delete</a>
+        <a asp-action="Edit" asp-route-id="@room.Id">Edit</a>
+    </td>
+</tr>}
+    </tbody>
 </table>
-

@@ -37,3 +37,4 @@
 /Users/shqiprimkurtaj/Projects/HyraBil/HyraBil/obj/Debug/netcoreapp3.1/Razor/Views/Minabokningar/Index.cshtml.g.cs
 /Users/shqiprimkurtaj/Projects/HyraBil/HyraBil/obj/Debug/netcoreapp3.1/Razor/Views/Hyrabilar/Create.cshtml.g.cs
 /Users/shqiprimkurtaj/Projects/HyraBil/HyraBil/obj/Debug/netcoreapp3.1/Razor/Views/Hyrabilar/Index.cshtml.g.cs
+/Users/shqiprimkurtaj/Projects/HyraBil/HyraBil/bin/Debug/netcoreapp3.1/mono_crash.11a6748113.0.json

@@ -8,19 +8,25 @@
                 <label class="control-label">Namn</label>
                 <input class="form-control" asp-for="Namn" />
                 <span asp-validation-for="Namn" class=" text-danger"></span>
-            </div>
+            </div
             <div class="form-group">
-                <label class="control-label">Växellåda</label>
-                @Html.DropDownListFor(model => model.Växellåda,
-               Enum.GetNames(typeof(Hyrabil.Models.SkapaHyrbilar.VaxelLadaEnum))
-               .Select(e => new SelectListItem { Text = e }), new { @class = "form-control" })
+                <label asp-for="VaxelLadaType" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <select asp-for="VaxelLadaType" asp-items="Html.GetEnumSelectList<VaxelLadaEnum>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="VaxelLadaType" class="text-danger" />
+                </div>
             </div>
 
             <div class="form-group">
-                <label class="control-label">Sittplatser</label>
-                @Html.DropDownListFor(model => model.Sittplats,
-               Enum.GetNames(typeof(Hyrabil.Models.SkapaHyrbilar.SittPlatserEnum))
-               .Select(e => new SelectListItem { Text = e }), new { @class = "form-control" })
+                <label asp-for="SittPlatserType" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <select asp-for="SittPlatserType" asp-items="Html.GetEnumSelectList<SittPlatserEnum>()">
+                        <option selected="selected" value="">Please select</option>
+                    </select>
+                    <span asp-validation-for="SittPlatserType" class="text-danger" />
+                </div>
             </div>
 
             <div class="form-group">

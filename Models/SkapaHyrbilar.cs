@@ -15,26 +15,30 @@ namespace Hyrabil.Models
         [StringLength(30, ErrorMessage = "Room name cannot be more than 30 characters.")]
         public string Namn { get; set; }
 
-        public VaxelLadaEnum Växellåda { get; set; }
 
-        public SittPlatserEnum Sittplats { get; set; }
+        [EnumDataType(typeof(VaxelLadaEnum))]
+        public VaxelLadaEnum VaxelLadaType { get; set; }
+
+        [EnumDataType(typeof(SittPlatserEnum))]
+        public SittPlatserEnum SittPlatserType { get; set; }
+
 
         [Required(ErrorMessage = "Size is required.")]
         [Range(3, 8, ErrorMessage = "Floor must be between 0 and 100")]
         public int Sittplatser { get; set; }
 
-        public enum VaxelLadaEnum
-        {
-            Manuell,
-            Automat
-        }
-
-        public enum SittPlatserEnum
-        {
-            Två,
-            Fyra,
-            Fem,
-            Sju
-        }
     }
+}
+public enum VaxelLadaEnum
+{
+    Manuell,
+    Automat
+}
+
+public enum SittPlatserEnum
+{
+    Två,
+    Fyra,
+    Fem,
+    Sju
 }
